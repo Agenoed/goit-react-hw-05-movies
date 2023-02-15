@@ -3,6 +3,7 @@ import { getDetails } from 'API/api';
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
+import css from './MovieDetails.module.css';
 
 export default function MovieDetails() {
   const [movieTitle, setMovieTitle] = useState();
@@ -37,7 +38,7 @@ export default function MovieDetails() {
       {
         <>
           <Link to={backHref}>Go back</Link>
-          <div>
+          <div className={css.Description}>
             {
               <img
                 src={
@@ -48,16 +49,16 @@ export default function MovieDetails() {
                 alt={movieTitle}
               />
             }
-          </div>
-          <div>
-            <h1>
-              {movieTitle}({movieDate})
-            </h1>
-            <p>User score: {Math.round(movieVote * 10)}%</p>
-            <h2>Overview</h2>
-            <p>{movieOverview}</p>
-            <h2>Genres</h2>
-            <p>{movieGenres.map(genre => genre.name).join(', ')}</p>
+            <div>
+              <h1>
+                {movieTitle}({movieDate})
+              </h1>
+              <p>User score: {Math.round(movieVote * 10)}%</p>
+              <h2>Overview</h2>
+              <p>{movieOverview}</p>
+              <h2>Genres</h2>
+              <p>{movieGenres.map(genre => genre.name).join(', ')}</p>
+            </div>
           </div>
           <div>
             <h3>Additional information</h3>
