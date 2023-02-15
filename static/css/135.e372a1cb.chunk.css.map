@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/135.e372a1cb.chunk.css","mappings":"AAAA,iCAIE,4BAA8B,CAH9B,YAAa,CACb,QAAS,CACT,aAEF","sources":["pages/MovieDetails/MovieDetails.module.css"],"sourcesContent":[".Description {\n  display: flex;\n  gap: 30px;\n  padding: 5px 0px;\n  border-bottom: 1px solid black;\n}\n"],"names":[],"sourceRoot":""}
